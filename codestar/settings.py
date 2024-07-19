@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-ewradcliffe-djangoblog-wvlgnt8gavx.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = ["8000-ewradcliffe-djangoblog-wvlgnt8gavx.ws.codeinstitute-ide.net", '.herokuapp.com']
 
 
 # Application definition
@@ -90,6 +90,13 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://*.herokuapp.com",
+    "https://ewradcliffe-djangoblog-wvlgnt8gavx.ws.codeinstitute-ide.net",
+    "https://8000-ewradcliffe-djangoblog-wvlgnt8gavx.ws.codeinstitute-ide.net",
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
