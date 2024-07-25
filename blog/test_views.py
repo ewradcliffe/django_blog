@@ -27,6 +27,7 @@ class TestBlogViews(TestCase):
             response.context['comment_form'], CommentForm)
 
     def test_successful_comment_submission(self):
+        
         """Test for posting a comment on a post"""
         self.client.login(
             username="myUsername", password="myPassword")
